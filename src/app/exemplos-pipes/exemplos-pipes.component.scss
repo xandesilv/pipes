@@ -1,0 +1,23 @@
+.inputsize {
+  width: 20%;
+  border: #12abdb solid;
+  border-radius: 5px;
+}
+
+input::placeholder{
+  color: #b1b1b1;
+}
+
+.btn-primary {
+  background-color: #0070ad;
+}
+.btn-primary:hover{
+  background-color: #12abdb;
+}
+
+td {
+  padding:1px 200px 1px 1px;
+}
+table {
+  margin: 20px
+}

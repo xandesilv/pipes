@@ -8,3 +8,77 @@
 <p>Url: {{ livro.url }} </p>
 <br>
 <p>Livro: {{ livro | json  }}</p>
+
+<input class="form-control me-2 inputsize" type="text" placeholder="Search" [(ngModel)]="filtro">
+<br>
+<input class="me-2 inputsize" type="text" #novoValor>
+<button  class="btn btn-primary" (click)="addCurso(novoValor.value)" >Add Curso</button>
+
+<!-- <h5>Pipe Puro</h5>
+<ul>
+  <li *ngFor="let liv of livros | filtroArray:filtro"  >
+    {{ liv }}
+  </li>
+</ul>
+
+<h5>Pipe Impuro</h5>
+
+<ul>
+  <li *ngFor="let liv of livros | filtroArrayImpuro :filtro"  >
+    {{ liv }}
+  </li>
+</ul>
+
+<h5>Maneira correta de usar filtro nos projetos</h5>
+
+<ul>
+  <li *ngFor="let liv of obterLivros()"  >
+    {{ liv }}
+  </li>
+</ul> -->
+
+
+<table>
+  <tr>
+      <td>Pipe puro</td>
+      <td>Pipe Impuro</td>
+      <td>Maneira correta de usar filtro</td>
+  </tr>
+  <tr>
+      <td>
+        <ul>
+          <li *ngFor="let liv of livros | filtroArray:filtro"  >
+            {{ liv }}
+          </li>
+        </ul>
+      </td>
+
+      <td>
+        <ul>
+          <li *ngFor="let liv of livros | filtroArrayImpuro :filtro"  >
+            {{ liv }}
+          </li>
+        </ul>
+
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let liv of obterLivros()"  >
+            {{ liv }}
+          </li>
+        </ul>
+      </td>
+  </tr>
+
+</table>
+
+<table>
+  <tr>
+    <td> <h5>Promise Async 1s</h5> </td>
+    <td> <h5>Observable Async 2s</h5> </td>
+   </tr>
+<tr>
+ <td><p> {{ valorAsync | async }} </p> </td>
+ <td><p> {{ valorAsync2 | async }}</p> </td>
+</tr>
+</table>
